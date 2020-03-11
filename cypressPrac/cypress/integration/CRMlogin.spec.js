@@ -2,11 +2,11 @@
 
 describe('All Login tests with underlying functions',function()
 {
-
    beforeEach(function()
    {
       cy.visit('https://www.crmpro.com/');
    })
+
 it('As a login user,i should be able to redirect to the CRM home page after passing the valid username,password and hitting login button',function(){
    //cy.visit('https://www.amazon.com/');
    //cy.visit('https://www.crmpro.com/?delay-.nav > :nth-child(2) > a=5000')
