@@ -73,19 +73,20 @@ describe('All Signup tests with underlying functions',function()
       cy.get('select').select('Free Edition');
       cy.get('input[name="first_name"]').type('Firstyoo');
       cy.get('input[name="surname"]').type('Lastyoo');
-      cy.get('input[name="email"]').type('yoos_125@yopmail.com');
-      cy.get('input[name="email_confirm"]').type('yoos_125@yopmail.com');
-      cy.get('input[name="username"]').type('yoos1139');
-      cy.get('input[name="password"]').type('Chetu@12345');
-      cy.get('input[name="passwordconfirm"]').type('Chetu@12345');
+      cy.get('input[name="email"]').type('yoos122@yopmail.com');
+      cy.get('input[name="email_confirm"]').type('yoos122@yopmail.com');
+      cy.get('input[name="username"]').type('yoos1222');
+      cy.get('input[name="password"]').type('Chetu@123');
+      cy.get('input[name="passwordconfirm"]').type('Chetu@123');
       cy.get('input[name="agreeTerms"]').check();
       cy.contains('SUBMIT').click();
       cy.url().should('include','https://classic.freecrm.com/register/?step=2&CFID=');
+
       cy.get('input[name="company_name"]').type('INFOSYS');
       cy.get('input[name="phone"]').type('9958948650');
-      cy.get('input[name="fax"]').type('yoos_124900@yopmail.com');
-      cy.get('input[name="website"]').type('yoos_1245667@yopmail.com');
-      cy.get('input[name="company_email"]').type('yoos1134@yopmail.com');
+      cy.get('input[name="fax"]').type('8787878787');
+      cy.get('input[name="website"]').type('5454554sfggddfhfd');
+      cy.get('input[name="company_email"]').type('yoos0990@yopmail.com');
       cy.get('textarea[name="service"]').type('TECHINICIAN');
       cy.get('textarea[name="address"]').type('miami,florida');
       cy.get('input[name="city"]').type('Florida');
@@ -97,13 +98,30 @@ describe('All Signup tests with underlying functions',function()
 
       cy.get('input[name="first_name"]').type('Firstyoo');
       cy.get('input[name="surname"]').type('Lastyoo');
-      cy.get('input[name="email"]').type('yoos_125@yopmail.com');
-      cy.get('input[name="email_confirm"]').type('yoos_125@yopmail.com');
-      cy.get('input[name="username"]').type('yoos1139');
-      cy.get('input[name="password"]').type('Chetu@12345');
-      cy.get('input[name="passwordconfirm"]').type('Chetu@12345');
+      cy.get('input[name="email"]').type('yoos333@yopmail.com');
+      cy.get('input[name="email_confirm"]').type('yoos333@yopmail.com');
+      cy.get('input[name="username"]').type('yoos0070');
+      cy.get('input[name="password"]').type('Chetu@123');
+      cy.get('input[name="passwordconfirm"]').type('Chetu@123');
+      cy.get('select').select('User Administrator');
+      cy.contains('Add User').click();
+      cy.url().should('include','https://classic.freecrm.com/register/?step=4&CFID=');
+      
+      
+      cy.get('input[name="first_name"]').type('Firstyoo');
+      cy.get('input[name="surname"]').type('Lastyoo');
+      cy.get('input[name="email"]').type('yoos98998@yopmail.com');
+      cy.get('input[name="email_confirm"]').type('yoos98998@yopmail.com');
+      cy.get('input[name="username"]').type('yoos00100');
+      cy.get('input[name="password"]').type('Chetu@123');
+      cy.get('input[name="passwordconfirm"]').type('Chetu@123');
+      cy.get('select').select('User Administrator');
+      cy.contains('Add User').click();
+      cy.url().should('include','https://classic.freecrm.com/register/?step=4&CFID=');
+      cy.wait(2000);
 
-
+      cy.get('button[name="finish"]').click();
+      cy.url().should('include','https://classic.freecrm.com/register/?step=5');
    })
 
 
