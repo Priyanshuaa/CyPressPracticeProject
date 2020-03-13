@@ -1,10 +1,10 @@
 {
-  "name": "CyPress-Practice",
+  "name": "cypresspractice",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress":"cypress open",
+    "test":"cypress run"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Priyanshuaa/CyPressPracticeProject/issues"
   },
-  "homepage": "https://github.com/Priyanshuaa/CyPressPracticeProject#readme"
+  "homepage": "https://github.com/Priyanshuaa/CyPressPracticeProject#readme",
+  "description": ""
 }
