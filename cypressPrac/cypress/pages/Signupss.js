@@ -1,6 +1,6 @@
 export class Signup {
     initializes(urls) {
-        cy.visit(urls);
+        cy.visit(urls)
         //cy.visit('https://classic.freecrm.com/register/');
     }
 
@@ -103,14 +103,14 @@ export class Signup {
         //cy.url().should('include','https://classic.freecrm.com/register/?step=4&CFID=');
     }
 
-    signup3(firstn, lastn, useremail, useremailconfirm, users, passs, confirmpasss, selectuser) {
-        cy.get('input[name="first_name"]').type('Firstyoo');
-        cy.get('input[name="surname"]').type('Lastyoo');
-        cy.get('input[name="email"]').type('yoos333@yopmail.com');
-        cy.get('input[name="email_confirm"]').type('yoos333@yopmail.com');
-        cy.get('input[name="username"]').type('yoos0070');
-        cy.get('input[name="password"]').type('Chetu@123');
-        cy.get('input[name="passwordconfirm"]').type('Chetu@123');
+    signup3(firstn, lastn, useremail, useremailconfirm, users, passs, confirmpasss) {
+        cy.get('input[name="first_name"]').type(firstn);
+        cy.get('input[name="surname"]').type(lastn);
+        cy.get('input[name="email"]').type(useremail);
+        cy.get('input[name="email_confirm"]').type(useremailconfirm);
+        cy.get('input[name="username"]').type(users);
+        cy.get('input[name="password"]').type(passs);
+        cy.get('input[name="passwordconfirm"]').type(confirmpasss);
         // cy.get('input[name="first_name"]').type('Firstyoo');
         // cy.get('input[name="surname"]').type('Lastyoo');
         // cy.get('input[name="email"]').type('yoos333@yopmail.com');
@@ -146,6 +146,6 @@ export class Signup {
 
     signupsurl(signupurlss) {
         //cy.url().should('include','https://classic.freecrm.com/register/?step=2&CFID=');
-        cy.url().should('include', signupurl);
+        cy.url().should('include', signupurlss);
     }
 }
