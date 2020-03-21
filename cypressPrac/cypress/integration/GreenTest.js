@@ -19,7 +19,7 @@ it('My FirstTest case',function() {
 cy.visit("https://www.amazon.in/s?k=laptops&ref=nb_sb_noss_2")
 cy.wait(2000)
 
-cy.get('.sg-row').each(($e1, index, $list) => {
+cy.get('.sg-row:visible').each(($e1, index, $list) => {
 
 const textVeg=$e1.find('span.a-size-medium.a-color-base.a-text-normale').text()
 if(textVeg.includes('Acer'))
@@ -27,6 +27,8 @@ if(textVeg.includes('Acer'))
     $e1.find('button').click()
 }
 })
+
+
 
 
 })
